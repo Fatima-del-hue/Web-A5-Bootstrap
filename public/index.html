@@ -11,6 +11,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- stylesheet - !reminder! we are using scss   -->
         <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+        <!-- Bootstrap Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+
 
         <title>Bootstap-Assignmnet</title>
     </head>
@@ -19,7 +22,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <!-- Sidebar -->
-                <nav class="col-lg-2 col-md-3 d-md-block bg-dark sidebar">
+                <nav id="sidebarMenu" class="col-lg-2 col-md-3 d-md-block bg-dark sidebar collapse">
                     <div class="sidebar-sticky pt-3">
                         <div id="logo-div">
                             <img src="/assets/images/logo.png" alt="Logo" id="logo-icon">
@@ -69,55 +72,64 @@
                         </ul>
                     </div>
                 </nav>
-                
+
+
+
                 <!-- Main Content -->
                 <main class="col-lg-10 col-md-9 ms-sm-auto px-md-4">
                     <!-- Header -->
-                    <header class="header">
-                        <h2>Overview</h2>
-                        <div class="profile-info">
-                            <div class="icon-group">
+                    <header class="header d-flex align-items-center justify-content-between px-3">
+                        <button class="navbar-toggler d-md-none me-2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                        </button>
+                        
+                        <h2 class="flex-grow-1 m-0">Overview</h2>
+                        <div class="profile-info d-flex align-items-center gap-2">
+                            <div class="icon-group d-flex align-items-center gap-2">
                                 <i class="fas fa-search" aria-label="Search"></i>
                                 <i class="fas fa-bell" aria-label="Notification"></i>
                                 <span class="notification-badge">•</span>
-                                <span class="separator">|</span>
+                                <span class="separator d-none d-md-inline">|</span>
                             </div>
-                            <span>Jones Ferdinand</span>
-                            <img src="/assets/images/photo.png" alt="Profile">
+                            <span >Jones Ferdinand</span>
+                            <img src="/assets/images/photo.png" alt="Profile" class="rounded-circle" style="width: 40px; height: 40px;">
                         </div>
                     </header>
+
                     <!-- Stats Cards -->
                     <section class="row g-3 mb-3">
-                        <article class="col-lg-3 col-md-6">
-                            <div class=" stats-card text-center">
+                        <article class="col-6 col-lg-3">
+                            <div class="stats-card text-center">
                                 <h5>Unresolved</h5>
                                 <h3>60</h3>
                             </div>
                         </article>
-                        <article class="col-lg-3 col-md-6">
-                            <div class=" stats-card text-center">
+                        <article class="col-6 col-lg-3">
+                            <div class="stats-card text-center">
                                 <h5>Overdue</h5>
                                 <h3>16</h3>
                             </div>
                         </article>
-                        <article class="col-lg-3 col-md-6">
-                            <div class=" stats-card text-center">
+                        <article class="col-6 col-lg-3">
+                            <div class="stats-card text-center">
                                 <h5>Open</h5>
                                 <h3>43</h3>
                             </div>
                         </article>
-                        <article class="col-lg-3 col-md-6">
-                            <div class=" stats-card text-center">
+                        <article class="col-6 col-lg-3">
+                            <div class="stats-card text-center">
                                 <h5>On Hold</h5>
                                 <h3>64</h3>
                             </div>
                         </article>
                     </section>
+
+
                     <!-- Graph Card -->
                     <section class="card graph-card">
                         <div class="row g-0 h-100">
                             <!-- Left side -->
-                            <article class="trends-graph col-lg-8">
+                            <article class="trends-graph col-lg-8 ">
                                 <div class="card-body">
                                     <h5 class="card-title">Today's trends</h5>
                                     <p class="card-subtitle text-muted">as of 25 May 2019, 09:41 PM</p>
@@ -134,31 +146,35 @@
                                     <img class="graph-image" src="/assets/images/full graph.jpg" alt="Graph of trends">
                                 </div>
                             </article>
+                            
                             <!-- Right side -->
                             <article class="stats col-lg-4 d-flex flex-column h-100">
-                                <ul class="list-group list-group-flush flex-grow-1 d-flex flex-column justify-content-between h-100">
-                                    <li class="list-group-item d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                                        <h6>Resolved</h6>
-                                        <h3 class="stat-value">449</h3>
-                                    </li>
-                                    <li class="list-group-item d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                                        <h6>Received</h6>
-                                        <h3 class="stat-value">426</h3>
-                                    </li>
-                                    <li class="list-group-item d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                                        <h6>Average first response time</h6>
-                                        <h3 class="stat-value">33m</h3>
-                                    </li>
-                                    <li class="list-group-item d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                                        <h6>Average response time</h6>
-                                        <h3 class="stat-value">3h 8m</h3>
-                                    </li>
-                                    <li class="list-group-item d-flex flex-column justify-content-center align-items-center flex-grow-1">
-                                        <h6>Resolution within SLA</h6>
-                                        <h3 class="stat-value">94%</h3>
-                                    </li>
+                                <ul class="list-group list-group-flush flex-grow-1 justify-content-between h-100">
+                                    <div class="row ul-row"> <!-- row wrapper -->
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                            <h6>Resolved</h6>
+                                            <h3 class="stat-value">449</h3>
+                                        </li>
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                            <h6>Received</h6>
+                                            <h3 class="stat-value">426</h3>
+                                        </li>
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                            <h6>Average first response time</h6>
+                                            <h3 class="stat-value">33m</h3>
+                                        </li>
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                            <h6>Average response time</h6>
+                                            <h3 class="stat-value">3h 8m</h3>
+                                        </li>
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 flex-grow-1">
+                                            <h6>Resolution within SLA</h6>
+                                            <h3 class="stat-value">94%</h3>
+                                        </li>
+                                    </div>
                                 </ul>
                             </article>
+
                         </div>
                     </section>
                     
