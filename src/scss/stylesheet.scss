@@ -13,59 +13,68 @@ $font-color: #a4a6b3;
 
 // media query for responsive design
 @media only screen and (min-width: 650px) {
-    body{
+    body {
         font-family: 'Mulish', sans-serif;
         background-color: $content-bg-color;
     }
+
     // style for side bar
     .sidebar {
-        position: fixed; /* so it stays fixed in its position*/
+        position: fixed;
+        /* so it stays fixed in its position*/
         top: 0;
         left: 0;
-        height: 100vh; 
+        height: 100vh;
         width: 250px;
         background-color: $sidebar-bg-color;
         color: white;
         padding: 0;
-        overflow-y: auto; /* if i scroll sidebar still stays  */
+        overflow-y: auto;
+        /* if i scroll sidebar still stays  */
         display: flex;
         flex-direction: column;
-        #logo-div
-        {
+
+        #logo-div {
             display: flex;
             align-items: center;
             padding-left: 25px;
             padding-bottom: 50px;
             padding-top: 10px;
         }
-        #logo-icon{
+
+        #logo-icon {
             width: 32px;
             margin-right: 10px;
         }
-        h4{
+
+        h4 {
             text-align: center;
             font-weight: bold;
             color: $font-color;
             font-size: 19px;
-            padding-top: 10px;  
+            padding-top: 10px;
         }
+
         a {
             color: $font-color;
             padding: 10px 20px;
             text-decoration: none;
             display: block;
             font-size: 16px;
-            i{
+
+            i {
                 width: 20px;
                 margin-right: 10px;
-                text-align: center; 
+                text-align: center;
             }
+
             // styling for active one in sidebar
-            &.active{
-                color: $sidebar-txt-on-hover; 
+            &.active {
+                color: $sidebar-txt-on-hover;
                 border-left: 4px solid $sidebar-txt-on-hover;
                 background-color: $sidebar-hover-color;
             }
+
             // this is for hover (not necessary)
             &:hover {
                 background-color: $sidebar-hover-color;
@@ -73,88 +82,104 @@ $font-color: #a4a6b3;
             }
         }
     }
+
     // styling for header (overview , name , notification etc)
     .header {
         background-color: #f7f8fc;
-        padding-top:30px;
+        padding-top: 30px;
         padding-bottom: 54px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         h2 {
-            font-size: 1.5rem; 
+            font-size: 1.5rem;
             margin: 0;
             font-weight: bold;
         }
+
         .profile-info {
             display: flex;
             align-items: center;
+
             .icon-group {
                 display: flex;
                 align-items: center;
                 position: relative;
                 margin-right: 20px;
+
                 .fa-bell {
-                    font-size: 1rem; 
+                    font-size: 1rem;
                     color: #c5c7cd;
                     position: relative;
                     padding-right: 14px;
                     padding-left: 14px;
                 }
+
                 .fa-search {
-                    font-size: 1rem; 
+                    font-size: 1rem;
                     color: #c5c7cd;
                     margin-left: 10px;
                     padding-right: 14px;
                     padding-left: 14px;
                 }
+
                 .separator {
                     font-size: 1.5rem;
                     color: #c5c7cd;
                     margin: 0 5px;
                 }
+
                 .notification-badge {
                     position: absolute;
                     top: 2px;
                     right: 15px;
-                    background-color: #3751ff; 
+                    background-color: #3751ff;
                     color: #3751ff;
                     font-size: 0.4rem;
                     padding: 2px 5px;
                     border-radius: 50%;
                 }
             }
+
             span {
                 font-size: 1rem;
                 color: #333;
                 margin-right: 8px;
                 font-weight: 600;
             }
+
             img {
                 border-radius: 50%;
-                width: 42px; 
+                width: 42px;
                 height: 42px;
             }
         }
     }
+
     // styling of cards with blue hover
-    .stats-card{
+    .stats-card {
         padding: 40px;
         border: 1px solid #dfe0eb;
         background-color: $card-bg-color;
+
         &:hover {
-            border-color: darken(#3751FF, 10%); 
-            box-shadow: 0 0 2px #DDE2FF, 0 0 4px darken(#3751ff, 10%); 
-            h5, h3 {
+            border-color: darken(#3751FF, 10%);
+            box-shadow: 0 0 2px #DDE2FF, 0 0 4px darken(#3751ff, 10%);
+
+            h5,
+            h3 {
                 color: darken(#3751ff, 10%);
             }
         }
+
         h5 {
             font-size: 19px;
             margin: 0;
             font-weight: bold;
             color: #9fa2b4;
         }
+
         h3 {
             padding-top: 25px;
             font-size: 40px;
@@ -163,8 +188,9 @@ $font-color: #a4a6b3;
             color: #252733;
         }
     }
+
     // styling for graph card (left and right part)
-    .graph-card{
+    .graph-card {
         border-radius: 8px;
         height: 546px;
         background-color: $card-bg-color;
@@ -172,13 +198,16 @@ $font-color: #a4a6b3;
         border: 1px solid #dfe0eb;
         display: flex;
         padding: 0;
+
         .trends-graph {
             position: relative;
             padding-top: 25px;
             padding-left: 25px;
-            .graph-image{
+
+            .graph-image {
                 padding-top: 20px;
             }
+
             .graph-help {
                 position: absolute;
                 top: 10px;
@@ -187,12 +216,14 @@ $font-color: #a4a6b3;
                 gap: 30px;
                 padding-top: 30px;
                 right: 50px;
+
                 .indicator {
                     display: flex;
                     align-items: center;
                     color: #9fa2b4;
                     font-size: 12px;
                     font-weight: 400;
+
                     .bar {
                         width: 16px;
                         height: 2px;
@@ -200,64 +231,282 @@ $font-color: #a4a6b3;
                         border-radius: 1px;
                     }
                 }
+
                 .today .bar {
                     background-color: #3751ff;
                 }
-        
+
                 .yesterday .bar {
                     background-color: #dfe0eb;
                 }
             }
         }
-        .stats{
+
+        .stats {
             height: 100%;
+
             .list-group-item {
                 border: 1px solid #dfe0eb;
                 border-radius: 0;
-                padding: 1.5rem 0; 
+                padding: 1.5rem 0;
                 display: flex;
                 flex-direction: column;
-                justify-content: center; 
+                justify-content: center;
                 align-items: center;
-                flex-grow: 1; 
+                flex-grow: 1;
             }
+
             .stat-value {
                 color: #252733;
             }
-            li{
+
+            li {
                 padding-top: 50px;
                 padding-bottom: 50px;
                 display: flex;
                 flex-direction: column;
-                h3{
+
+                h3 {
                     font-size: 24px;
-                    font-weight: bold; 
+                    font-weight: bold;
                     padding-top: 10px;
-                    margin: 0; 
+                    margin: 0;
                 }
-                h6{
+
+                h6 {
                     font-weight: 400;
                     color: #9fa2b4;
                     margin: 0;
                 }
             }
+
             // this is to give radius to only right side of the first and last elements of list item so that it matches the card and doesnt look wonky
             .list-group-item:first-child {
                 border-top-right-radius: 8px;
             }
+
             .list-group-item:last-child {
                 border-bottom-right-radius: 8px;
             }
         }
     }
-    .chart-placeholder{
-        border-radius: 8px;
-        background-color: $card-bg-color;
-        height: 250px;
-        background: #e9ecef;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }  
+
+    // styling for bottom part
+    .bottom-section {
+        padding-bottom: 20px;
+
+        // Style for Unresolved Tickets list
+        .task-card {
+            height: 380px;
+            border: 1px solid #e3e6f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background-color: #ffffff;
+
+            .d-flex {
+                margin-bottom: 0.5rem;
+            }
+
+            h5 {
+                font-size: 19px;
+                font-weight: bold;
+                color: #252733;
+            }
+
+            .view-all-link {
+                color: #3751FF;
+                font-size: 14px;
+                font-weight: 400;
+                text-decoration: none;
+            }
+
+            .today-text {
+                padding-top: 0;
+                color: #9fa2b4;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            //style for create task and add task
+            .create-task {
+                display: flex;
+                align-items: center;
+                justify-content: space-between; //to make childern stay away from eachother
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+
+                .create-text {
+                    color: #c5c7cd;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-right: 8px;
+                }
+
+                .add-task-box {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #f0f1f7;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    i {
+                        font-size: 14px;
+                        color: #9fa2b4;
+                    }
+                }
+            }
+
+            //styling for list of task in bottom of task card
+            .tasks-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0.8rem 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #252733;
+                    border-bottom: 1px solid #e3e6f0;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    // icon for only checked box
+                    .task-checkbox {
+                        font-size: 18px;
+                        cursor: pointer;
+                        color: #c5c7cd;
+                        margin-right: 8px;
+
+                        &.checked {
+                            color: #3751ff;
+                        }
+                    }
+
+                    label {
+                        color: #252733;
+                        margin-left: 5px;
+                    }
+
+                    .badge {
+                        text-transform: uppercase;
+                        font-size: 11px;
+                        padding: 0.5rem 0.8rem;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        color: #ffffff;
+                    }
+
+                    .bg-warning {
+                        background-color: #fec400;
+                    }
+
+                    .bg-success {
+                        background-color: #29cc97;
+                    }
+
+                    .bg-secondary {
+                        background-color: #f0f1f7;
+                        color: 9FA2B4;
+                    }
+                }
+            }
+
+            .view-all-link {
+                color: #3751ff;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            .today-text {
+                color: #9fa2b4;
+                font-size: 14px;
+                margin-top: 1rem;
+            }
+
+            .create-task {
+                display: flex;
+                align-items: center;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
+
+                .create-text {
+                    color: #c5c7cd;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .add-task-box {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #f0f1f7;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 8px;
+
+                    i {
+                        font-size: 14px;
+                        color: #9fa2b4;
+                    }
+                }
+            }
+        }
+
+        // Style for Unresolved Tickets list
+        .tickets-card {
+            height: 380px;
+            border: 1px solid #e3e6f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background-color: #ffffff;
+
+            h5 {
+                font-size: 19px;
+                font-weight: bold;
+                color: #252733;
+            }
+
+            .view-details-link {
+                color: #3751ff;
+                font-size: 14px;
+                text-decoration: none;
+            }
+
+            .group-text {
+                color: #9fa2b4;
+                font-size: 14px;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+
+            .ticket-list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1rem 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #252733;
+                    border-bottom: 1px solid #e3e6f0;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
 }
