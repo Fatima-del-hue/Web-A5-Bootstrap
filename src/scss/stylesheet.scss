@@ -562,12 +562,6 @@ body {
             right: 10px;
             height: 100%;
 
-            .ul-row {
-                // somehow it was having a gutter on right 
-                // this is to eliminate that gutter 
-                --bs-gutter-x: 0;
-            }
-
             .list-group-item {
                 padding: 1.56rem 0;
             }

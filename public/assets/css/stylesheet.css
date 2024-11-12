@@ -449,9 +449,6 @@ body {
     right: 10px;
     height: 100%;
   }
-  .graph-card .stats .ul-row {
-    --bs-gutter-x: 0;
-  }
   .graph-card .stats .list-group-item {
     padding: 1.56rem 0;
   }
