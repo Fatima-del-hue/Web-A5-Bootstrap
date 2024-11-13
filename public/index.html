@@ -69,6 +69,12 @@
                                     <i class="fas fa-credit-card"></i> Subscription
                                 </a>
                             </li>
+                            <!-- sperate feature -->
+                            <li class="nav-item ">
+                                <button type="button" class="btn btn-link nav-link text-start  ps-3" data-bs-toggle="modal" data-bs-target="#sidebarModal">
+                                    <i class="fas fa-envelope "></i> Contact Us
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -248,7 +254,30 @@
             </div>
         </div>
 
-
+         <!-- Button Modal - contact us pop up-->
+         <div class="modal fade" id="sidebarModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Contact Us</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Linking bootstrap js -->
