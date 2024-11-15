@@ -13,9 +13,7 @@ body {
     background-color: $content-bg-color;
 }
 // to hide side bar on mobile screen
-.sidebar.collapse {
-    position: fixed;
-    top: 0;
+.sidebar {
     left: 0;
     height: 100vh;
     width: 250px;
@@ -34,8 +32,6 @@ body {
     .profile-info {
 
         .icon-group {
-            display: flex;
-            align-items: center;
             position: relative;
             margin-right: 20px;
 
@@ -60,7 +56,6 @@ body {
             }
 
             .notification-badge {
-                position: absolute;
                 top: -4px;
                 right: -2px;
                 background-color: #3751ff;
@@ -86,13 +81,6 @@ body {
     }
 }
 
-// styling of stats card
-.stats-row {
-    display: flex;
-    flex-wrap: wrap;            
-    gap: 10px;                   
-    justify-content: center;     
-}
 
 // Styling for each card
 .stats-card {
@@ -101,11 +89,7 @@ body {
     border: 1px solid #dfe0eb;
     border-radius: 8px;
     background-color: $card-bg-color;
-    display: flex;               
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+   
 
     &:hover {
         border-color: darken(#3751FF, 10%);
@@ -118,16 +102,12 @@ body {
 
     h5 {
         font-size: 19px;
-        margin: 0;
-        font-weight: bold;
         color: #9fa2b4;
     }
 
     h3 {
         padding-top: 15px;
         font-size: 40px;
-        font-weight: bold;
-        margin: 0;
         color: #252733;
     }
 }
@@ -143,7 +123,6 @@ body {
     padding: 0;
 
     .trends-graph {
-        position: relative;
         padding-top: 25px;
 
         .graph-image {
@@ -160,8 +139,6 @@ body {
             right: 15px;
 
             .indicator {
-                display: flex;
-                align-items: center;
                 color: #9fa2b4;
                 font-size: 12px;
                 font-weight: 400;
@@ -196,10 +173,6 @@ body {
             border: 1px solid #dfe0eb;
             border-radius: 0;
             padding: 1.5rem 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             flex-grow: 1;
 
             
@@ -208,9 +181,7 @@ body {
         li {
             padding-top: 50px;
             padding-bottom: 50px;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
+            /////////////////////////////////
 
             h3 {
                 font-size: 24px;
@@ -274,9 +245,6 @@ body {
 
         //style for create task and add task
         .create-task {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; //to make childern stay away from eachother
             margin-top: 2rem;
             margin-bottom: 1rem;
 
@@ -291,9 +259,6 @@ body {
                 width: 24px;
                 height: 24px;
                 background-color: #f0f1f7;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 border-radius: 8px;
 
                 i {
@@ -438,9 +403,6 @@ body {
             list-style: none;
 
             li {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 padding: 1rem 0;
                 font-size: 16px;
                 font-weight: 500;

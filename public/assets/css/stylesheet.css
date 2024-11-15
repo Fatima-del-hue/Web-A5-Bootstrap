@@ -3,9 +3,7 @@ body {
   background-color: #f7f8fc;
 }
 
-.sidebar.collapse {
-  position: fixed;
-  top: 0;
+.sidebar {
   left: 0;
   height: 100vh;
   width: 250px;
@@ -21,8 +19,6 @@ body {
   font-weight: bold;
 }
 .header .profile-info .icon-group {
-  display: flex;
-  align-items: center;
   position: relative;
   margin-right: 20px;
 }
@@ -45,7 +41,6 @@ body {
   margin: 0 5px;
 }
 .header .profile-info .icon-group .notification-badge {
-  position: absolute;
   top: -4px;
   right: -2px;
   background-color: #3751ff;
@@ -66,24 +61,12 @@ body {
   height: 42px;
 }
 
-.stats-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
 .stats-card {
   width: 100%;
   padding: 20px;
   border: 1px solid #dfe0eb;
   border-radius: 8px;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 .stats-card:hover {
   border-color: rgb(4, 36.63, 255);
@@ -94,15 +77,11 @@ body {
 }
 .stats-card h5 {
   font-size: 19px;
-  margin: 0;
-  font-weight: bold;
   color: #9fa2b4;
 }
 .stats-card h3 {
   padding-top: 15px;
   font-size: 40px;
-  font-weight: bold;
-  margin: 0;
   color: #252733;
 }
 
@@ -116,7 +95,6 @@ body {
   padding: 0;
 }
 .graph-card .trends-graph {
-  position: relative;
   padding-top: 25px;
 }
 .graph-card .trends-graph .graph-image {
@@ -132,8 +110,6 @@ body {
   right: 15px;
 }
 .graph-card .trends-graph .graph-help .indicator {
-  display: flex;
-  align-items: center;
   color: #9fa2b4;
   font-size: 12px;
   font-weight: 400;
@@ -161,18 +137,11 @@ body {
   border: 1px solid #dfe0eb;
   border-radius: 0;
   padding: 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
 }
 .graph-card .stats li {
   padding-top: 50px;
   padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 .graph-card .stats li h3 {
   font-size: 24px;
@@ -224,9 +193,6 @@ body {
   font-weight: 500;
 }
 .bottom-section .task-card .create-task {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -240,9 +206,6 @@ body {
   width: 24px;
   height: 24px;
   background-color: #f0f1f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 8px;
 }
 .bottom-section .task-card .create-task .add-task-box i {
@@ -361,9 +324,6 @@ body {
   list-style: none;
 }
 .bottom-section .tickets-card .ticket-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem 0;
   font-size: 16px;
   font-weight: 500;

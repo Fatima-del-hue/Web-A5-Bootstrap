@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <!-- Sidebar -->
-                <nav id="sidebarMenu" class="col-lg-2 col-md-3 d-md-block bg-dark sidebar collapse">
+                <nav id="sidebarMenu" class="col-lg-2 col-md-3 d-md-block bg-dark sidebar position-fixed top-0 collapse">
                     <div class="sidebar-sticky pt-3">
                         <div id="logo-div">
                             <img src="/assets/images/logo.png" alt="Logo" id="logo-icon">
@@ -89,10 +89,10 @@
                         
                         <h2 class="flex-grow-1 m-0">Overview</h2>
                         <div class="profile-info d-flex align-items-center gap-2">
-                            <div class="icon-group d-flex align-items-center gap-2">
+                            <div class="icon-group d-stats-card  d-flex align-items-center gap-2 p-20">
                                 <i class="fas fa-search" aria-label="Search"></i>
                                 <i class="fas fa-bell" aria-label="Notification"></i>
-                                <span class="notification-badge">•</span>
+                                <span class="notification-badge position-absolute">•</span>
                                 <span class="separator d-none d-md-inline">|</span>
                             </div>
                             <span >Jones Ferdinand</span>
@@ -103,27 +103,27 @@
                     <!-- Stats Cards -->
                     <section class="row g-3 mb-3">
                         <article class="col-6 col-lg-3">
-                            <div class="stats-card text-center">
-                                <h5>Unresolved</h5>
-                                <h3>60</h3>
+                            <div class="stats-card text-center p-20 d-flex flex-column align-items-center justify-content-center ">
+                                <h5 class="m-0 fw-bold">Unresolved</h5>
+                                <h3 class="m-0 fw-bold">60</h3>
                             </div>
                         </article>
                         <article class="col-6 col-lg-3">
-                            <div class="stats-card text-center">
-                                <h5>Overdue</h5>
-                                <h3>16</h3>
+                            <div class="stats-card text-center p-20 d-flex flex-column align-items-center justify-content-center ">
+                                <h5 class="m-0 fw-bold">Overdue</h5>
+                                <h3 class="m-0 fw-bold">16</h3>
                             </div>
                         </article>
                         <article class="col-6 col-lg-3">
-                            <div class="stats-card text-center">
-                                <h5>Open</h5>
-                                <h3>43</h3>
+                            <div class="stats-card text-center p-20 d-flex flex-column align-items-center justify-content-center ">
+                                <h5 class="m-0 fw-bold">Open</h5>
+                                <h3 class="m-0 fw-bold">43</h3>
                             </div>
                         </article>
                         <article class="col-6 col-lg-3">
-                            <div class="stats-card text-center">
-                                <h5>On Hold</h5>
-                                <h3>64</h3>
+                            <div class="stats-card text-center p-20 d-flex flex-column align-items-center justify-content-center ">
+                                <h5 class="m-0 fw-bold">On Hold</h5>
+                                <h3 class="m-0 fw-bold">64</h3>
                             </div>
                         </article>
                     </section>
@@ -133,16 +133,16 @@
                     <section class="card g-3 graph-card">
                         <div class="row g-0 h-100">
                             <!-- Left side -->
-                            <article class="trends-graph col-lg-8 ">
+                            <article class="trends-graph col-lg-8 position-relative">
                                 <div class="card-body">
                                     <h5 class="card-title">Today's trends</h5>
                                     <p class="card-subtitle text-muted">as of 25 May 2019, 09:41 PM</p>
                                     <!-- Graph Help Section -->
                                     <div class="graph-help">
-                                        <span class="indicator today">
+                                        <span class="indicator d-flex align-items-center today">
                                             <div class="bar"></div>Today
                                         </span>
-                                        <span class="indicator yesterday">
+                                        <span class="indicator d-flex align-items-center yesterday">
                                             <div class="bar"></div>Yesterday
                                         </span>
                                     </div>
@@ -155,23 +155,23 @@
                             <article class="stats col-lg-4 d-flex flex-column h-100">
                                 <ul class="list-group list-group-flush flex-grow-1 justify-content-between h-100">
                                     <div class="row g=0 ul-row"> <!-- row wrapper -->
-                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 text-center">
                                             <h6>Resolved</h6>
                                             <h3 class="stat-value">449</h3>
                                         </li>
-                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 text-center">
                                             <h6>Received</h6>
                                             <h3 class="stat-value">426</h3>
                                         </li>
-                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 text-center">
                                             <h6>Average first response time</h6>
                                             <h3 class="stat-value">33m</h3>
                                         </li>
-                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12">
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 text-center">
                                             <h6>Average response time</h6>
                                             <h3 class="stat-value">3h 8m</h3>
                                         </li>
-                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 flex-grow-1">
+                                        <li class="list-group-item d-flex flex-column justify-content-center align-items-center col-6 col-lg-12 flex-grow-1 text-center">
                                             <h6>Resolution within SLA</h6>
                                             <h3 class="stat-value">94%</h3>
                                         </li>
@@ -195,17 +195,17 @@
                                     <p class="group-text">Group: 
                                         <span>Support</span>
                                     </p>
-                                    <ul class="list-unstyled ticket-list">
-                                        <li>Waiting on Feature Request 
+                                    <ul class="list-unstyled ticket-list m-0 p-0 list-unstyled">
+                                        <li class="d-flex align-items-center justify-content-between">Waiting on Feature Request 
                                             <span class="float-end">4238</span>
                                         </li>
-                                        <li>Awaiting Customer Response 
+                                        <li class="d-flex align-items-center justify-content-between">Awaiting Customer Response 
                                             <span class="float-end">1005</span>
                                         </li>
-                                        <li>Awaiting Developer Fix 
+                                        <li class="d-flex align-items-center justify-content-between">Awaiting Developer Fix 
                                             <span class="float-end">914</span>
                                         </li>
-                                        <li>Pending 
+                                        <li class="d-flex align-items-center justify-content-between">Pending 
                                             <span class="float-end">281</span>
                                         </li>
                                     </ul>
@@ -222,9 +222,9 @@
                                         <a href="#" class="view-all-link">View all</a>
                                     </div>
                                     <p class="today-text">Today</p>
-                                    <div class="create-task">
-                                        <span class="create-text">Create new task</span>
-                                        <div class="add-task-box">
+                                    <div class="create-task d-flex align-items-center justify-content-between">
+                                        <span class="create-text d-flex align-items-center justify-content-between">Create new task</span>
+                                        <div class="add-task-box d-flex align-items-center justify-content-center">
                                             <i class="fa fa-plus"></i>
                                         </div>
                                     </div>
