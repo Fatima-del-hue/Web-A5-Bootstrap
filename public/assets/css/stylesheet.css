@@ -351,9 +351,8 @@ body {
     flex-direction: column;
   }
   .sidebar #logo-div {
-    display: flex;
     align-items: center;
-    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 50px;
     padding-top: 10px;
   }

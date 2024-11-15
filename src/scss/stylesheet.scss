@@ -18,6 +18,8 @@ body {
     height: 100vh;
     width: 250px;
     z-index: 1030;
+
+
 }
 // styling for header on mobile
 .header {
@@ -181,7 +183,6 @@ body {
         li {
             padding-top: 50px;
             padding-bottom: 50px;
-            /////////////////////////////////
 
             h3 {
                 font-size: 24px;
@@ -439,9 +440,8 @@ body {
         flex-direction: column;
 
         #logo-div {
-            display: flex;
             align-items: center;
-            padding-left: 25px;
+            padding-right: 25px;
             padding-bottom: 50px;
             padding-top: 10px;
         }
